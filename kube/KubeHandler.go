@@ -23,7 +23,7 @@ type PodInfo struct {
 // initClient 用于初始化Kubernetes客户端
 func initClient() (*kubernetes.Clientset, error) {
 	// 配置Kubernetes客户端
-	config, err := clientcmd.BuildConfigFromFlags("", "/Users/starl/GolandProjects/ArkCTF/kube/kube-conifg.yaml")
+	config, err := clientcmd.BuildConfigFromFlags("", "/path/to/kubeconfig")
 	if err != nil {
 		log.Printf("无法构建Kubernetes配置：%v", err)
 		return nil, err
